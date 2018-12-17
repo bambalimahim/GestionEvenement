@@ -1,0 +1,33 @@
+entity Evenement {
+	nom String required,
+    dateEvenement LocalDate required
+}
+
+entity Lieu {
+	nom String required
+}
+
+entity Presence {
+	
+}
+
+entity Membre {
+	telephone String required
+}
+
+relationship OneToOne {
+	Membre to User, 
+    Evenement{presence} to Presence{evenement}
+}
+
+relationship ManyToMany {
+	Membre{presence(login)} to Presence{membre}
+}
+
+relationship OneToMany {
+	Evenement{lieu} to Lieu{evenement}
+}
+
+// Set pagination options
+paginate Evenement, Presence, Lieu, Membre with pagination
+

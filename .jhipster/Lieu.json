@@ -1,0 +1,29 @@
+{
+    "name": "Lieu",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "evenement",
+            "otherEntityName": "evenement",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181217113050",
+    "entityTableName": "lieu",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -41,6 +41,13 @@ public class CacheConfiguration {
             cm.createCache(dmn.sn.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(dmn.sn.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(dmn.sn.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(dmn.sn.domain.Evenement.class.getName(), jcacheConfiguration);
+            cm.createCache(dmn.sn.domain.Evenement.class.getName() + ".lieus", jcacheConfiguration);
+            cm.createCache(dmn.sn.domain.Lieu.class.getName(), jcacheConfiguration);
+            cm.createCache(dmn.sn.domain.Presence.class.getName(), jcacheConfiguration);
+            cm.createCache(dmn.sn.domain.Presence.class.getName() + ".membres", jcacheConfiguration);
+            cm.createCache(dmn.sn.domain.Membre.class.getName(), jcacheConfiguration);
+            cm.createCache(dmn.sn.domain.Membre.class.getName() + ".presences", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

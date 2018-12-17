@@ -1,0 +1,22 @@
+{
+    "gestionEvenementApp": {
+        "presence": {
+            "home": {
+                "title": "Presences",
+                "createLabel": "Créer un nouveau Presence",
+                "createOrEditLabel": "Créer ou éditer un Presence"
+            },
+            "created": "Un nouveau Presence a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Presence avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Presence avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Presence {{ id }} ?"
+            },
+            "detail": {
+                "title": "Presence"
+            },
+            "evenement": "Evenement",
+            "membre": "Membre"
+        }
+    }
+}

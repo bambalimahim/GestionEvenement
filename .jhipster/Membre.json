@@ -1,0 +1,39 @@
+{
+    "name": "Membre",
+    "fields": [
+        {
+            "fieldName": "telephone",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "membre"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "membre",
+            "relationshipName": "presence",
+            "otherEntityName": "presence",
+            "otherEntityField": "login",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20181217113052",
+    "entityTableName": "membre",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
