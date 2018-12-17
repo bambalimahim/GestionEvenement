@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "GestionEvenement",
+    "packageName": "dmn.sn",
+    "packageFolder": "dmn/sn",
+    "serverPort": 8080,
+    "serviceDiscoveryType": "eureka",
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": true,
+    "nativeLanguage": "fr",
+    "languages": [
+      "ar-ly",
+      "fr"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.7.1",
+    "jwtSecretKey": "ODk4NTUyNDdjZTc5YWFiYzYyMDI4MTJlNWRhMDhmNTBmYjM4ZGZlMzQ0MTA0NmI5ZWExNjdhMmRjN2U5ODZkMjJiZTRmYmRjNWI0ZDg3ZmJhMjkwMTEwNTA1YmNlNGJjN2YwODRiNjgwNzZkNjIzZWMwYjY0NDFkYzYyZmU4ZjA=",
+    "otherModules": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "bambalimahim",
+  "repository-name": "GestionEvenement"
+}
