@@ -1,0 +1,44 @@
+{
+    "name": "Evenement",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateEvenement",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "presence",
+            "otherEntityName": "presence",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "evenement"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "lieu",
+            "otherEntityName": "lieu",
+            "otherEntityRelationshipName": "evenement"
+        }
+    ],
+    "changelogDate": "20181217113049",
+    "entityTableName": "evenement",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

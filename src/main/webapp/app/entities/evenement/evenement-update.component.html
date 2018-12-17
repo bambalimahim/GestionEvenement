@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-evenement-heading" jhiTranslate="gestionEvenementApp.evenement.home.createOrEditLabel">Create or edit a Evenement</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!evenement.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="evenement.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionEvenementApp.evenement.nom" for="field_nom">Nom</label>
+                    <input type="text" class="form-control" name="nom" id="field_nom"
+                        [(ngModel)]="evenement.nom" required/>
+                    <div [hidden]="!(editForm.controls.nom?.dirty && editForm.controls.nom?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nom?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionEvenementApp.evenement.dateEvenement" for="field_dateEvenement">Date Evenement</label>
+                    <div class="input-group">
+                        <input id="field_dateEvenement" type="text" class="form-control" name="dateEvenement" ngbDatepicker  #dateEvenementDp="ngbDatepicker" [(ngModel)]="evenement.dateEvenement"
+                        required/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dateEvenementDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div [hidden]="!(editForm.controls.dateEvenement?.dirty && editForm.controls.dateEvenement?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.dateEvenement?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionEvenementApp.evenement.presence" for="field_presence">Presence</label>
+                    <select class="form-control" id="field_presence" name="presence" [(ngModel)]="evenement.presence">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="presenceOption.id === evenement.presence?.id ? evenement.presence : presenceOption" *ngFor="let presenceOption of presences; trackBy: trackPresenceById">{{presenceOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

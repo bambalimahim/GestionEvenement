@@ -1,0 +1,29 @@
+{
+    "name": "Presence",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "evenement",
+            "otherEntityName": "evenement",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "presence"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "membre",
+            "otherEntityName": "membre",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "presence"
+        }
+    ],
+    "changelogDate": "20181217113051",
+    "entityTableName": "presence",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
